@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>建築師高考模擬練習系統</title>
   <meta name="description" content="建築師高考 113、114 年考古題模擬練習系統" />
-  <link rel="stylesheet" href="styles.css?v=20261025-4" />
+  <link rel="stylesheet" href="styles.css?v=20261025-5" />
 </head>
 <body>
   <header class="topbar">
@@ -42,13 +42,13 @@
       <div class="quiz-head"><button id="back-btn" class="icon-btn">← 返回設定</button><div class="quiz-title"><span id="quiz-subject"></span><small id="quiz-year"></small></div><div class="timer" id="timer">不計時</div></div>
       <div class="progress-row"><div class="progress-track"><div id="progress-bar"></div></div><strong id="progress-label">第 1 題 / 共 80 題</strong></div>
       <div class="quiz-layout">
-        <article class="question-card panel"><div class="question-meta"><span id="question-number">QUESTION 01</span><span id="question-points">1.25 分</span></div><h2 id="question-text"></h2><div id="options" class="options"></div><div id="instant-feedback" class="feedback hidden"></div><div class="question-footer"><span id="source-id"></span><button id="next-btn" class="primary-btn">下一題 <span>→</span></button></div><div class="completion-status" role="status" aria-live="polite">已完成 <strong id="answered-count">0 / 80</strong> 題</div></article>
+        <article class="question-card panel"><div class="question-meta"><span id="question-number">QUESTION 01</span><span id="question-points">1.25 分</span></div><h2 id="question-text"></h2><div id="options" class="options"></div><div id="instant-feedback" class="feedback hidden"></div><div class="question-footer"><span id="source-id"></span><div class="question-actions"><button id="giveup-btn" class="secondary-btn">忍痛放棄</button><button id="next-btn" class="primary-btn">下一題 <span>→</span></button></div></div><div class="completion-status" role="status" aria-live="polite">已完成 <strong id="answered-count">0 / 80</strong> 題</div></article>
       </div>
     </section>
 
     <section id="result-view" class="view hidden"><div class="result-hero"><p class="eyebrow">SESSION COMPLETE / 練習完成</p><h1>這一回合，<em>做得很好。</em></h1><p id="result-subtitle"></p></div><div class="score-grid"><div class="score-card score-main"><span>本次得分</span><strong id="score-value">0</strong><small id="score-max">/ 100 分</small></div><div class="score-card"><span>答對題數</span><strong id="correct-value">0</strong><small id="total-value">/ 0 題</small></div><div class="score-card"><span>正確率</span><strong id="accuracy-value">0%</strong><small>持續練習就會進步</small></div></div><div class="result-actions"><button id="retry-btn" class="primary-btn">再練一次 <span>↻</span></button><button id="home-btn" class="secondary-btn">返回設定</button></div><div class="review panel"><div class="review-head"><div><span class="section-label">02 / 檢討</span><h2>逐題檢視</h2></div><select id="review-filter"><option value="all">全部題目</option><option value="wrong">只看答錯</option><option value="correct">只看答對</option></select></div><div id="review-list"></div></div></section>
   </main>
   <script src="exam-core.js?v=20261025-2"></script>
-  <script src="app.js?v=20261025-4"></script>
+  <script src="app.js?v=20261025-5"></script>
 </body>
 </html>
