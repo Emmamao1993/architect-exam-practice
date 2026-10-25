@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>建築師高考模擬練習系統</title>
   <meta name="description" content="建築師高考 113、114 年考古題模擬練習系統" />
-  <link rel="stylesheet" href="styles.css?v=20261025-5" />
+  <link rel="stylesheet" href="styles.css?v=20261025-6" />
 </head>
 <body>
   <header class="topbar">
@@ -39,10 +39,10 @@
     </section>
 
     <section id="quiz-view" class="view hidden">
-      <div class="quiz-head"><button id="back-btn" class="icon-btn">← 返回設定</button><div class="quiz-title"><span id="quiz-subject"></span><small id="quiz-year"></small></div><div class="timer" id="timer">不計時</div></div>
+      <div class="quiz-head"><button id="back-btn" class="icon-btn">← 返回設定</button><div class="quiz-title"><span id="quiz-subject"></span><small id="quiz-year"></small></div><div class="quiz-head-actions"><div class="timer" id="timer">不計時</div><div class="end-session-action"><button id="giveup-btn" class="secondary-btn" title="結束整份作答，停止計時並立即計分" aria-label="忍痛放棄：結束整份作答並立即計分">忍痛放棄</button><small>結束作答並計分</small></div></div></div>
       <div class="progress-row"><div class="progress-track"><div id="progress-bar"></div></div><strong id="progress-label">第 1 題 / 共 80 題</strong></div>
       <div class="quiz-layout">
-        <article class="question-card panel"><div class="question-meta"><span id="question-number">QUESTION 01</span><span id="question-points">1.25 分</span></div><h2 id="question-text"></h2><div id="options" class="options"></div><div id="instant-feedback" class="feedback hidden"></div><div class="question-footer"><span id="source-id"></span><div class="question-actions"><button id="giveup-btn" class="secondary-btn">忍痛放棄</button><button id="next-btn" class="primary-btn">下一題 <span>→</span></button></div></div><div class="completion-status" role="status" aria-live="polite">已完成 <strong id="answered-count">0 / 80</strong> 題</div></article>
+        <article class="question-card panel"><div class="question-meta"><span id="question-number">QUESTION 01</span><span id="question-points">1.25 分</span></div><h2 id="question-text"></h2><div id="options" class="options"></div><div id="instant-feedback" class="feedback hidden"></div><div class="question-footer"><span id="source-id"></span><div class="question-actions"><button id="next-btn" class="primary-btn">下一題 <span>→</span></button></div></div><div class="completion-status" role="status" aria-live="polite">已完成 <strong id="answered-count">0 / 80</strong> 題</div></article>
       </div>
     </section>
 
