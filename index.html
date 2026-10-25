@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>建築師高考模擬練習系統</title>
+  <meta name="description" content="建築師高考 113、114 年考古題模擬練習系統" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">築</span><div><strong>建築師高考模擬練習系統</strong><small>Architect Exam Practice</small></div></div>
+    <div class="top-actions"><span class="status-dot"></span><span id="bank-status">題庫載入中</span></div>
+  </header>
+
+  <main class="shell">
+    <section id="setup-view" class="view">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">ARCHITECT EXAM / 近兩年度題庫</p>
+          <h1>把每一次練習，<br><em>變成上場前的準備。</em></h1>
+          <p class="hero-copy">依年度與科目精準選題，支援不計時練習與 2 小時真實模擬考，讓你清楚掌握答題節奏與弱點。</p>
+        </div>
+        <div class="hero-note"><span>113–114</span><small>資料年度</small><span>480</span><small>可練習題數</small></div>
+      </div>
+
+      <div class="panel setup-panel">
+        <div class="section-label">01 / 設定你的練習</div>
+        <div class="field-grid">
+          <label class="field"><span>考試年度</span><select id="year-select"><option value="all">113 + 114 年混合</option><option value="114">114 年</option><option value="113">113 年</option></select></label>
+          <label class="field"><span>練習科目</span><select id="subject-select"><option value="all">四科混合練習</option><option value="law">營建法規與實務</option><option value="construction">建築構造與施工</option><option value="environment">建築環境控制</option><option value="structure">建築結構</option></select></label>
+          <label class="field"><span>練習模式</span><select id="mode-select"><option value="practice">普通練習・不計時</option><option value="exam">真實模擬考・2 小時</option></select></label>
+          <label class="field"><span>答案回饋</span><select id="feedback-select"><option value="instant">即時回饋・答完一題就知道</option><option value="final">最後公布・全部作答後檢討</option></select></label>
+        </div>
+        <div class="setup-bottom"><div id="selection-summary" class="selection-summary"></div><button id="start-btn" class="primary-btn">開始練習 <span>→</span></button></div>
+      </div>
+
+      <div class="subject-grid" id="subject-cards"></div>
+      <div class="source-strip"><span>題庫來源</span><span>考選部考畢試題與標準答案・工作區原始 PDF</span><span class="source-years">113 / 114</span></div>
+    </section>
+
+    <section id="quiz-view" class="view hidden">
+      <div class="quiz-head"><button id="back-btn" class="icon-btn">← 返回設定</button><div class="quiz-title"><span id="quiz-subject"></span><small id="quiz-year"></small></div><div class="timer" id="timer">不計時</div></div>
+      <div class="progress-row"><div class="progress-track"><div id="progress-bar"></div></div><strong id="progress-label">第 1 題 / 共 80 題</strong></div>
+      <div class="quiz-layout"><aside class="question-map panel"><div class="map-title">答題進度 <span id="answered-count">0 / 80</span></div><div id="question-map-grid"></div><div class="map-legend"><span><i class="current"></i>目前</span><span><i class="done"></i>已作答</span></div></aside>
+        <article class="question-card panel"><div class="question-meta"><span id="question-number">QUESTION 01</span><span id="question-points">1.25 分</span></div><h2 id="question-text"></h2><div id="options" class="options"></div><div id="instant-feedback" class="feedback hidden"></div><div class="question-footer"><span id="source-id"></span><button id="next-btn" class="primary-btn">下一題 <span>→</span></button></div></article>
+      </div>
+    </section>
+
+    <section id="result-view" class="view hidden"><div class="result-hero"><p class="eyebrow">SESSION COMPLETE / 練習完成</p><h1>這一回合，<em>做得很好。</em></h1><p id="result-subtitle"></p></div><div class="score-grid"><div class="score-card score-main"><span>本次得分</span><strong id="score-value">0</strong><small>/ 100 分</small></div><div class="score-card"><span>答對題數</span><strong id="correct-value">0</strong><small id="total-value">/ 0 題</small></div><div class="score-card"><span>正確率</span><strong id="accuracy-value">0%</strong><small>持續練習就會進步</small></div></div><div class="result-actions"><button id="retry-btn" class="primary-btn">再練一次 <span>↻</span></button><button id="home-btn" class="secondary-btn">返回設定</button></div><div class="review panel"><div class="review-head"><div><span class="section-label">02 / 檢討</span><h2>逐題檢視</h2></div><select id="review-filter"><option value="all">全部題目</option><option value="wrong">只看答錯</option><option value="correct">只看答對</option></select></div><div id="review-list"></div></div></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
